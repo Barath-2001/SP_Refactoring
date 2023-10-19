@@ -84,7 +84,7 @@ return CNIC;
 string no() const {
 return Number;
 }
-void SetData(const string_view &n, const  string_view &ad, const string_view &cn,const  string_view &num) {
+void SetPersonData(const string_view &n, const  string_view &ad, const string_view &cn,const  string_view &num) {
 name = n;
 address = ad;
 CNIC = cn;
@@ -657,7 +657,7 @@ cin.ignore();
 getline(cin, address);
 } while (!(address.size() > 5)); // Address
 
-p.SetData(name, address, nic, Number); // Setting values to person class setdata function
+p.SetPersonData(name, address, nic, Number); // Setting values to person class setdata function
 }
 //showing the available cars...
 void Display_cars() {
