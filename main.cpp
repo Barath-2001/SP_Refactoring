@@ -580,8 +580,8 @@ a = 0;
 cout << "Enter Your First Name ( Minimum 3 Letters... ) : ";
 cin.ignore();
 getline(cin, fname);
-for (int i = 0; i < fname.size(); i++) {
-if (!(isalpha(fname[i]))) {
+for (int i : fname) {
+if (!(isalpha(i))) {
 a++;
 }
 else {
@@ -599,8 +599,8 @@ do {
 a = 0;
 cout << "Enter Your last Name ( Minimum 3 Letters... ) : ";
 getline(cin, lname);
-for (int i = 0; i < lname.size(); i++) {
-if (!(isalpha(lname[i]))) {
+for (int i :lname) {
+if (!(isalpha(i))) {
 a++;
 }
 else {
@@ -619,8 +619,8 @@ do {
 a = 0;
 cout << "Enter your CNIC ( 13 Digits without Dashes... ) : ";
 getline(cin, nic);
-for (int i = 0; i < nic.size(); i++) {
-if (!(isdigit(nic[i]))) {
+for (int i : nic) {
+if (!(isdigit(i))) {
 a++;
 }
 else {
@@ -637,8 +637,8 @@ do {
 a = 0;
 cout << "Enter your Mobile Number ( 11 digits without Dashes... ) : ";
 cin >> Number;
-for (int i = 0; i < Number.size(); i++) {
-if (!(isdigit(Number[i]))) {
+for (int i : Number) {
+if (!(isdigit(i))) {
 a++;
 }
 else {
