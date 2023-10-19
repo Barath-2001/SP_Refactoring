@@ -104,7 +104,7 @@ booked = 0;
 void Add() {
 booked += 1;
 }
-void SetBooked(cars& c, Person& p) const  {
+void SetBooked(const cars& c, const Person& p) const  {
 ofstream Write;
 Write.open("Cars Info.txt", ios::app);
 if (Write.is_open()) {
@@ -663,7 +663,7 @@ cout << "\t\tEnter 4 for City 2017." << endl;
 cout << "\t\tEnter 5 to Exit." << endl;
 cout << endl;
 }
-void Show_Rent(const cars & c, Person & p, TotalRent & r, int check) {
+void Show_Rent(const cars & c,const Person & p, const TotalRent & r, int check) {
 cout << "\n\t\t                       Car Rental - Customer Invoice                  " << endl;
 cout << "\t\t ///////////////////////////////////////////////////////////" << endl;
 cout << "\t\t | Invoice No. :" << "------------------|" << setw(18) << "#Cnb81353" << " |" << endl;
