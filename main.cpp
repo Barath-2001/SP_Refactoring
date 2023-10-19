@@ -534,6 +534,9 @@ break;
 case 5:
 
 break;
+default:
+cout<<"Error;
+break;
 }
 }
 system("cls");
