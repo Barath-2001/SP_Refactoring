@@ -322,7 +322,7 @@ Show_Rent(Info, data, Rent, checking);
 else {
 break;
 }
-break;
+[[fallthrough]];
 case 2:
 Info.SetData("Prado", "RIX-6878", "BLACK", 2015, 800, 8000);
 Menu();
