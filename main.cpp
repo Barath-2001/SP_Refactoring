@@ -25,13 +25,10 @@ string car_name;
 string car_number;
 string colour;
 int model;
-double price_per_hour;
-double price_per_day;
+double price_per_hour=00.0;
+double price_per_day=00.0;
 public:
-cars() {
-price_per_day = 00.0;
-price_per_hour = 00.0;
-}
+cars() =default;
 string car() const {
 return car_name;
 }
@@ -96,11 +93,9 @@ void Person_Info(Person& p);
 //only for admins...
 class Bookedcar :public cars {
 private:
-int booked;
+int booked=0;
 public:
-Bookedcar() {
-booked = 0;
-}
+Bookedcar() =default;
 void Add() {
 booked += 1;
 }
@@ -138,15 +133,12 @@ cout << "File Not Found ! \n";
 //depending on rent days etc...
 class TotalRent :public cars {
 private:
-double total;
-int days;
-double hours;
+double total=0;
+int days=0;
+double hours=0;
 
 public:
-TotalRent() {
-total = hours = 0;
-days = 0;
-}
+TotalRent() =default;
 int ret_d() const {
 return days;
 }
