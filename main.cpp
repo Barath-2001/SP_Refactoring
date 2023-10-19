@@ -50,7 +50,7 @@ return price_per_hour;
 double ppd() const {
 return price_per_day;
 }
-void SetData(string cname, string cnum, string col, int mod, double p, double pd) {
+void SetData(const string &cname, const string &cnum, const string &col, int mod, double p, double pd) {
 car_number = cnum;
 car_name = cname;
 model = mod;
@@ -84,7 +84,7 @@ return CNIC;
 string no() const {
 return Number;
 }
-void SetData(string n, string ad, string cn, string num) {
+void SetData(const string &n, const  string &ad, const string &cn,const  string &num) {
 name = n;
 address = ad;
 CNIC = cn;
