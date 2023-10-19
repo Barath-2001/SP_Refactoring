@@ -59,7 +59,7 @@ price_per_hour = p;
 price_per_day = pd;
 }
 
-string carname() {
+string carname() const {
 return car_name;
 }
 };
@@ -72,16 +72,16 @@ string address;
 string CNIC;
 string Number;
 public:
-string n() {
+string n() const {
 return name;
 }
-string add() {
+string add() const {
 return address;
 }
-string Cnic() {
+string Cnic() const {
 return CNIC;
 }
-string no() {
+string no() const {
 return Number;
 }
 void SetData(string n, string ad, string cn, string num) {
@@ -104,7 +104,7 @@ booked = 0;
 void Add() {
 booked += 1;
 }
-void SetBooked(cars& c, Person& p) {
+void SetBooked(cars& c, Person& p) const  {
 ofstream Write;
 Write.open("Cars Info.txt", ios::app);
 if (Write.is_open()) {
@@ -118,7 +118,7 @@ Write << "\t\t===============\n";
 Write << "\t\t\t Name : " << p.n() << "\n\t\t\t CNIC : " << p.Cnic() << "\n\t\t\t Phone Number : " << p.no() << "\n\t\t\t Address : " << p.add() << endl << endl;
 }
 }
-void GetBooked() {
+void GetBooked() const  {
 ifstream Read;
 Read.open("Cars Info.txt", ios::in);
 char data;
@@ -148,10 +148,10 @@ TotalRent() {
 total = hours = 0;
 days = 0;
 }
-int ret_d() {
+int ret_d() const {
 return days;
 }
-double ret_h() {
+double ret_h() const {
 return hours;
 }
 void SetData1(int d) {
@@ -168,7 +168,7 @@ double Cal2(const cars& obj) {
 total = obj.pph() * hours;
 return total;
 }
-double  GetTotal() {
+double  GetTotal() const{
 return total;
 }
 };
