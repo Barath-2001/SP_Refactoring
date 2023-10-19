@@ -32,22 +32,22 @@ cars() {
 price_per_day = 00.0;
 price_per_hour = 00.0;
 }
-string car() {
+string car() const {
 return car_name;
 }
-string cnum() {
+string cnum() const {
 return car_number;
 }
-string col() {
+string col() const {
 return colour;
 }
-int mod() {
+int mod() const {
 return model;
 }
-double pph() {
+double pph() const {
 return price_per_hour;
 }
-double ppd() {
+double ppd() const {
 return price_per_day;
 }
 void SetData(string cname, string cnum, string col, int mod, double p, double pd) {
